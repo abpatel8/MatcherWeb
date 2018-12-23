@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+<title>Register</title>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<div data-include="topnav"></div>
+
+	<script>
+		$(function() {
+
+			var includes = $('[data-include]');
+			jQuery.each(includes, function() {
+				var file = $(this).data('include') + '.html';
+				$(this).load(file);
+			});
+
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+
+
+	<main role="main">
+	<div class="jumbotron">
+		<div class="col-sm-8 mx-auto">
+			<h1>Register</h1>
+			<div>
+				<form id="rendered-form">
+					<div>
+						<div class="form-group">
+							<label for="nameInput" data-toggle="tooltip" data-placement="top"
+								title="First and Last Name">Name</label> <input type="text"
+								class="form-control" placeholder="First and Last Name"
+								name="nameInput" maxlength="100" id="nameInput"
+								required="required" aria-required="true" />
+						</div>
+						<div class="form-group">
+							<label for="emailInput">Email address</label> <input type="email"
+								class="form-control" id="emailInput"
+								aria-describedby="emailHelp" placeholder="name@email.com"
+								required="required" aria-required="true"> <small
+								id="emailHelp" class="form-text text-muted">We'll never
+								share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+							<label for="phoneInput" data-toggle="tooltip"
+								data-placement="top" title="Please enter your phone number">Phone
+								Number</label> <input type="tel" class="form-control"
+								placeholder="555-555-5555" name="phoneInput" maxlength="12"
+								id="phoneInput" required="required" aria-required="true" />
+						</div>
+						<div class="form-group">
+							<label for="radioDiv" data-toggle="tooltip" data-placement="top"
+								title="Please select your gender">Gender</label>
+							<div id="radioDiv">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio"
+										name="genderOptions" id="genderMale" required="required"
+										aria-required="true" value="male"> <label
+										class="form-check-label" for="male">Male</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio"
+										name="genderOptions" id="genderFemale" required="required"
+										aria-required="true" value="female"> <label
+										class="form-check-label" for="female">Female</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<button type="submit" class="btn btn-primary">Submit
+							&raquo;</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</main>
+
+</body>
+</html>
